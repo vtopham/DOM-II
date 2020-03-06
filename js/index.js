@@ -1,12 +1,5 @@
 // Your code goes here
 
-
-
-const headerImg = document.querySelector(".intro img");
-const mainTextContent = document.querySelectorAll(".text-content");
-const destinationHeaders = document.querySelectorAll(".destination h4");
-
-
 // mouseover & mouseleave replaces text with random text 1, 2
 const topNavLinks = document.querySelectorAll(".main-navigation a");
 
@@ -26,6 +19,8 @@ for (let i = 0; i < topNavLinks.length; i++) {
 
 //scroll randomly changes some colors 3
 const arrColors = ["red", "orange", "yellow", "green", "blue", "purple"];
+
+const destinationHeaders = document.querySelectorAll(".destination h4");
 
 for (let i = 0; i < destinationHeaders.length; i++) {
     window.addEventListener("scroll", (event) => {
@@ -57,6 +52,29 @@ window.addEventListener("resize", (event) => {
 });
 
 
+//lots of clicks!
+
+//button does something
+const destinationBtn = document.querySelectorAll(".destination .btn");
+
+for (let i = 0; i < destinationBtn.length; i++) { //7
+    destinationBtn[i].addEventListener("click", (event) => {
+        destinationBtn[i].style.border = "3px solid red";
+        event.stopPropagation();
+    });
+}
+
+//container does something but not when the button is pressed
+const destinationContainer = document.querySelectorAll(".destination");
+
+for (let i = 0; i < destinationContainer.length; i++) { // 8
+    destinationContainer[i].addEventListener("click", (event) => {
+        
+        console.log("hi");
+    })
+}
+
+
 // wheel
 
 // drag / drop
@@ -65,9 +83,6 @@ window.addEventListener("resize", (event) => {
 
 // focus
 
-// resize
-
-// scroll
 
 // select
 
