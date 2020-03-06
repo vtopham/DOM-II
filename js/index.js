@@ -7,7 +7,7 @@ const mainTextContent = document.querySelectorAll(".text-content");
 const destinationHeaders = document.querySelectorAll(".destination h4");
 
 
-// mouseover & mouseleave
+// mouseover & mouseleave replaces text with random text
 const topNavLinks = document.querySelectorAll(".main-navigation a");
 
 for (let i = 0; i < topNavLinks.length; i++) {
@@ -24,15 +24,8 @@ for (let i = 0; i < topNavLinks.length; i++) {
     });
 }
 
-//scroll
+//scroll randomly changes some colors
 const arrColors = ["red", "orange", "yellow", "green", "blue", "purple"];
-
-// for (let i = 0; i < destinationHeaders; i++) {
-//     window.addEventListener("scroll", (event) => {
-//         destinationHeaders[i].style.color = arrColors[Math.round(Math.random() * (arrColors.length - 1))];
-//         console.log("hi");
-//     });
-// }
 
 for (let i = 0; i < destinationHeaders.length; i++) {
     window.addEventListener("scroll", (event) => {
@@ -42,6 +35,12 @@ for (let i = 0; i < destinationHeaders.length; i++) {
 
 
 // keydown
+
+let headerIntro = document.querySelector(".intro p");
+
+document.addEventListener("keydown",(event) => {
+    headerIntro.textContent += `${event.code}`;
+});
 
 // wheel
 
