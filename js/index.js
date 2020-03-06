@@ -68,10 +68,29 @@ for (let i = 0; i < destinationBtn.length; i++) { //7
 const destinationContainer = document.querySelectorAll(".destination");
 
 for (let i = 0; i < destinationContainer.length; i++) { // 8
-    destinationContainer[i].addEventListener("click", (event) => {
-        
-        console.log("hi");
+    destinationContainer[i].addEventListener("click", function (event) {
+        this.style.backgroundColor = "lightgray";
     })
+}
+
+//anything h2 turns pink when clicked
+
+const allH2 = document.querySelectorAll("h2");
+
+for (let i = 0; i < allH2.length; i++) { //9
+    allH2[i].addEventListener("click", function (event) {
+        this.style.color = "pink";
+    });
+}
+
+//anything p gets small when clicked
+
+const allP = document.querySelectorAll("p");
+
+for (let i = 0; i < allP.length; i++) { //10
+    allP[i].addEventListener("click", function (event) {
+        this.style.fontSize = ".1rem";
+    });
 }
 
 
