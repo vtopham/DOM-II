@@ -94,14 +94,12 @@ for (let i = 0; i < allP.length; i++) { //10
 }
 
 
-// wheel
+//kill default for a tag
 
-// drag / drop
+const allA = document.querySelectorAll("a");
 
-// load
-
-// focus
-
-
-// select
-
+for (let i = 0; i < allA.length; i++) {
+    allA[i].addEventListener("click", (event) => {
+        event.preventDefault();
+    });
+}
