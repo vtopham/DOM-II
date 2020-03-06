@@ -7,7 +7,7 @@ const mainTextContent = document.querySelectorAll(".text-content");
 const destinationHeaders = document.querySelectorAll(".destination h4");
 
 
-// mouseover & mouseleave replaces text with random text
+// mouseover & mouseleave replaces text with random text 1, 2
 const topNavLinks = document.querySelectorAll(".main-navigation a");
 
 for (let i = 0; i < topNavLinks.length; i++) {
@@ -24,7 +24,7 @@ for (let i = 0; i < topNavLinks.length; i++) {
     });
 }
 
-//scroll randomly changes some colors
+//scroll randomly changes some colors 3
 const arrColors = ["red", "orange", "yellow", "green", "blue", "purple"];
 
 for (let i = 0; i < destinationHeaders.length; i++) {
@@ -34,13 +34,28 @@ for (let i = 0; i < destinationHeaders.length; i++) {
 }
 
 
-// keydown
-
+// keydown adds to the intro paragraph 4
 let headerIntro = document.querySelector(".intro p");
 
 document.addEventListener("keydown",(event) => {
     headerIntro.textContent += `${event.code}`;
 });
+
+
+// dblclick makes the image smaller 5
+let allImages = document.querySelectorAll("img");
+
+for (let i = 0; i < allImages.length; i++) {
+    allImages[i].addEventListener("dblclick", (event) => {
+        allImages[i].style.width = "50%";
+    });
+}
+
+//resize 6
+window.addEventListener("resize", (event) => {
+    alert("Are you sure you want to resize?");
+});
+
 
 // wheel
 
@@ -56,4 +71,3 @@ document.addEventListener("keydown",(event) => {
 
 // select
 
-// dblclick
