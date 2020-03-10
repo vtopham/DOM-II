@@ -41,10 +41,14 @@ function rightOnHold (event) {
 
     event.target.addEventListener("mouseup", (event) => {
         clearInterval(id);
+        position = 0;
+        event.target.style.left = position + "px";
     });
 
     event.target.addEventListener("mouseout", (event) => {
         clearInterval(id); //if you don't do this you'll have problems
+        position = 0;
+        event.target.style.left = position + "px";
     });
 }
 
