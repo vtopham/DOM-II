@@ -9,6 +9,11 @@ const grayBlock = document.querySelector(".block--gray");
 const allBlocks = [redBlock, blueBlock, greenBlock, pinkBlock, grayBlock];
 
 
+allBlocks.forEach((item) => {
+    item.textContent = "\ud83d\ude80"
+    item.style.fontSize =  "100px"
+    item.style.background = "none";
+})
 
 //make a block go to the stop of the stack 
 
