@@ -21,10 +21,10 @@ function climbToTop (event) {
 //make things move to the right
 //on mousedown, start an animation, on mouseup, stop the animation
 
-let position = 0;
+// let position = 0;
 
 function rightOnHold (event) {
-    
+    let position = 0;
     var id = setInterval(increment, 100);
 
     function increment(){
@@ -37,12 +37,13 @@ function rightOnHold (event) {
     event.target.addEventListener("mouseup", (event) => {
         clearInterval(id);
     });
+
+    event.target.addEventListener("mouseout", (event) => {
+        clearInterval(id); //if you don't do this you'll have problems
+    });
 }
 
-// function stopOnRelease (event) {
-//     clearInterval(id);
-//     console.log(id);
-// }
+
 
 
 
